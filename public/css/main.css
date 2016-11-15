@@ -1,0 +1,227 @@
+/*----- Header -----*/
+
+header {
+  background-color: lightblue;
+  height: 200px;
+  background: linear-gradient(rgba(150, 200, 256, .5), transparent 90%), linear-gradient(0deg, white, transparent);
+  background-size: cover;
+}
+
+header h1 {
+  margin: 0;
+  padding-top: 10px;
+  font-size: 2.0em;
+}
+
+.title {
+  color: white;
+  text-decoration: none;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  text-shadow: 2px 3px 5px black;
+}
+
+.title, .title:visited {
+  color: white;
+}
+
+/*----- Question Box -----*/
+
+#mainContainer {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.questionContainer {
+
+}
+
+.questionText {
+  padding: 10px;
+  height:400px;
+}
+
+.questionText p {
+  line-height: 22px;
+}
+
+.answeredContainer {
+  float: none;
+}
+
+.answeredContainer li {
+  list-style: none;
+  margin-bottom: 8px;
+  padding: 10px;
+  line-height: 22px;
+}
+
+.answeredContainer ul {
+  padding: 0;
+}
+
+.answeredWrapper ul {
+  list-style-type: none;
+}
+
+.answeredText {
+  width:84%;
+  float:left;
+  box-shadow: 2px 3px 5px black;
+}
+
+.answeredCorrect {
+  float:right;
+  width:8%;
+}
+
+#answeredContainerH3 {
+  display:inline;
+}
+
+.fa-check-circle {
+  color: green;
+}
+
+.fa-times-circle {
+  color: red;
+}
+
+#answerBox {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width:100%;
+  height: 48px;
+  font-size: 32px;
+}
+
+#answerButton {
+  width: 100%;
+}
+
+#answerBox:focus {
+  outline:none;
+}
+
+/*-----Background colors for subject area-----*/
+
+.AH {
+  background-color: #eeccff;
+}
+
+.LA {
+  background-color: #ffffcc;
+}
+
+.MA {
+  background-color: #ffdddd;
+}
+
+.SC {
+  background-color: #ddffdd;
+}
+
+.SS {
+  background-color: #ffe67a;
+}
+
+/*----- Slider control for hiding correct answers -----*/
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*----- Responsive Design -----*/
+
+@media (min-width: 600px) {
+  header {
+    background: linear-gradient(rgba(150, 200, 256, .5), transparent 90%), linear-gradient(0deg, white, transparent), url('/images/banner.jpg') no-repeat center;
+    background-size:cover;
+  }
+}
+
+@media (min-width: 668px) {
+  header h1 {
+    padding-top: 25px;
+  }
+}
+
+/*----- Reduce Header H1 Font Size w/ Smaller Window -----*/
+@media (min-width: 1200px) {
+  header h1 {
+    padding-top: 15px;
+    font-size: 2.5em;
+  }
+}
+
+/*----- Move Answered Questions under active question on smaller screens -----*/
+
+@media (min-width: 1060px) {
+  .answeredContainer {
+    width: 48%;
+    margin-right: 4%;
+    float:right;
+  }
+
+  .questionContainer {
+    width: 40%;
+    margin-left: 4%;
+    float: left;
+  }
+}

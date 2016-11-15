@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandeis Quick Recall</title>
+    <link href="/images/icon_knowledge.png" rel="icon" type="image/png">
+    <link href="/css/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+  </head>
+  <body ng-app="qrQuestionsApp">
+    <header>
+      <h1><a href="index.html" class="title">
+          <h1>Brandeis Quick Recall</h1></a></h1>
+    </header>
+    <div style="visibility: hidden" class="scoreContainer">
+      <p class="score"></p>
+    </div>
+    <div id="mainContainer" ng-controller="mainCtrl">
+      <div class="questionContainer">
+        <div class="questionText">
+          <p class="question">Welcome to Elementary Quick Recall!  Press Start to begin practicing questions!</p>
+        </div>
+        <button id="startButton" type="button" ng-click="newQuestion()">Start!</button>
+        <input id="answerBox" type="text" style="visibility: hidden">
+        <button id="answerButton" type="button" style="visibility: hidden">Submit</button>
+      </div>
+      <div style="visibility: hidden" class="answeredContainer">
+        <label class="switch">
+          <input type="checkbox" class="hideCorrectCheckbox">
+          <div class="slider round"></div>
+        </label>
+        <h3 id="answeredContainerH3">Questions Asked</h3>
+        <ul class="questionList"></ul>
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/9afd57290f.js"></script>
+    <script src="js/qr.js"></script>
+  </body>
+</html>
